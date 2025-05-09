@@ -12,7 +12,7 @@ import java.security.Principal;
 /**
  * 이 컨트롤러는 스프링 시큐리티에서 제공하는 인증 객체(Authentication, Principal, UserDetails)를
  * 활용하여 현재 인증된 사용자 정보를 조회하는 다양한 방식을 보여줍니다.
- * 실무에서 활용할 떄는 민감 정보가 노출되지 않도록 주의해야 한다.
+ * 실무에서 활용할 떄는 민감 정보가 노출되지 않도록 주의해야 합니다.
  */
 @RestController
 public class AuthenticationController {

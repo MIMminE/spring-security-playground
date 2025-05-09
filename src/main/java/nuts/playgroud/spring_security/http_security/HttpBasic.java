@@ -17,12 +17,6 @@ import java.lang.annotation.Target;
 @EnableWebSecurity
 public class HttpBasic {
 
-    @Target(ElementType.TYPE)
-    @Retention(RetentionPolicy.RUNTIME)
-    @Import(HttpBasic.class)
-    public @interface EnableHttpBasicTemplate {
-    }
-
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.httpBasic(basic -> basic

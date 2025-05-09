@@ -21,12 +21,6 @@ import java.util.List;
 @EnableWebSecurity
 public class RememberMe {
 
-    @Target(ElementType.TYPE)
-    @Retention(RetentionPolicy.RUNTIME)
-    @Import(RememberMe.class)
-    public @interface EnableRememberMe {
-    }
-
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 

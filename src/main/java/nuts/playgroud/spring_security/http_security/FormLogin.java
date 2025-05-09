@@ -19,12 +19,6 @@ import java.lang.annotation.Target;
 @Slf4j
 public class FormLogin {
 
-    @Target(ElementType.TYPE)
-    @Retention(RetentionPolicy.RUNTIME)
-    @Import(FormLogin.class)
-    public @interface EnableFormLoginTemplate {
-    }
-
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
