@@ -1,6 +1,5 @@
-package nuts.learning.security_basic.cases.rest.jwt.controller
+package nuts.learning.security_basic.cases.rest.jwt
 
-import nuts.learning.security_basic.cases.rest.jwt.JwtTokenProvider
 import org.springframework.context.annotation.Profile
 import org.springframework.http.ResponseEntity
 import org.springframework.security.authentication.AuthenticationManager

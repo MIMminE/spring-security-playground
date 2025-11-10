@@ -1,6 +1,5 @@
-package nuts.learning.security_basic.cases.rest.jwt.config
+package nuts.learning.security_basic.cases.rest.jwt
 
-import nuts.learning.security_basic.cases.rest.jwt.JwtAuthenticationFilter
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Profile

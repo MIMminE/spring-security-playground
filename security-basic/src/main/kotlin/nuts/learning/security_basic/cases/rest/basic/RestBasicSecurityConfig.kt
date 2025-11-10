@@ -1,4 +1,4 @@
-package nuts.learning.security_basic.cases.rest.basic.config
+package nuts.learning.security_basic.cases.rest.basic
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

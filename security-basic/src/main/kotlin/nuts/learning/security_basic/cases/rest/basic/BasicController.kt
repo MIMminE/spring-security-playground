@@ -1,4 +1,4 @@
-package nuts.learning.security_basic.cases.rest.basic.controller
+package nuts.learning.security_basic.cases.rest.basic
 
 import org.springframework.context.annotation.Profile
 import org.springframework.web.bind.annotation.GetMapping
