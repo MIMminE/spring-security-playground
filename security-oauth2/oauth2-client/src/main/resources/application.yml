@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: oauth2-client
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2.client: DEBUG
+    org.springframework.security.oauth2.client.endpoint: DEBUG
+    org.springframework.security.oauth2.client.web: DEBUG
+    org.springframework.security.oauth2.core: DEBUG
+    org.springframework.web.client: DEBUG
+    org.springframework.web.reactive.function.client: DEBUG
+    org.apache.http: DEBUG
