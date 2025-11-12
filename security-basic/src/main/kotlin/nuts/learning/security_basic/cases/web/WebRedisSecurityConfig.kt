@@ -108,7 +108,13 @@ class WebRedisSecurityConfig {
                 response.contentType = "application/json;charset=UTF-8"
                 response.writer.write("{\"message\":\"세션 만료: 다른 곳에서 로그인되었습니다.\"}")
             } else {
-                response.sendRedirect("/session-expired")
+                // 정적 리소스(session-expired.html)를 포워드하여 클라이언트에게 전달
+                try {
+                    request.getRequestDispatcher("/session-expired.html").forward(request, response)
+                } catch (ex: Exception) {
+                    // 포워드 실패 시 대체로 리다이렉트
+                    response.sendRedirect("/session-expired")
+                }
             }
         }
     }
@@ -124,7 +130,12 @@ class WebRedisSecurityConfig {
                 response.contentType = "application/json;charset=UTF-8"
                 response.writer.write("{\"message\":\"세션이 유효하지 않습니다. 다시 로그인해주세요.\"}")
             } else {
-                response.sendRedirect("/session-invalid")
+                // 정적 리소스(session-invalid.html)를 포워드하여 클라이언트에게 전달
+                try {
+                    request.getRequestDispatcher("/session-invalid.html").forward(request, response)
+                } catch (ex: Exception) {
+                    response.sendRedirect("/session-invalid")
+                }
             }
         }
     }
