@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: oauth2-client
+
+    config:
+      activate:
+        on-profile: v3
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/oauth2db
+    driver-class-name: org.postgresql.Driver
+    username: oauth2
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${google.client.id}
+            client-secret: ${google.client.secret}
+            scope: profile, email, openid
+            redirect-uri: "http://localhost:8080/login/oauth2/code/google"
+            authorization-grant-type: authorization_code
+
+        provider:
+          google:
+            issuer-uri: https://accounts.google.com
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2.client: DEBUG
+    org.springframework.security.oauth2.client.endpoint: DEBUG
+    org.springframework.security.oauth2.client.web: DEBUG
+    org.springframework.security.oauth2.core: DEBUG
+    org.springframework.web.client: DEBUG
+    org.springframework.web.reactive.function.client: DEBUG
+    org.apache.http: DEBUG

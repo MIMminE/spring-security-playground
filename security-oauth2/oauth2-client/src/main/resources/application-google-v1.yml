@@ -1,0 +1,26 @@
+spring:
+  config:
+    activate:
+      on-profile: google-v1
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${google.client.id}
+            client-secret: ${google.client.secret}
+
+            scope: profile, email
+            redirect-uri: "http://localhost:8080/login/oauth2/code/google"
+            authorization-grant-type: authorization_code
+
+        provider:
+          google:
+            issuer-uri: https://accounts.google.com
+server:
+  port: 8080
+
+
+
+
