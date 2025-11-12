@@ -12,7 +12,7 @@ import org.springframework.security.oauth2.core.oidc.user.OidcUser
 import org.springframework.stereotype.Component
 import org.springframework.transaction.annotation.Transactional
 
-@Profile("v3")
+@Profile("v3", "v4")
 @Component
 class V3OidcUserService(private val userRepository: UserRepository) : OidcUserService() {
 

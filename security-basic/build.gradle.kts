@@ -26,6 +26,14 @@ repositories {
 }
 
 dependencies {
+    // 스프링 세션 사용을 위한 라이브러리
+    implementation("org.springframework.session:spring-session-core")
+
+    // Redis 기반 세션 저장을 위한 Spring Session Redis
+    implementation("org.springframework.session:spring-session-data-redis")
+    // Redis 연결을 위한 스프링 데이터 레디스 스타터 (Lettuce 사용)
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
+
     // JWT 사용을 위한 라이브러리
     implementation("io.jsonwebtoken:jjwt-api:0.11.5")
     implementation("io.jsonwebtoken:jjwt-impl:0.11.5")

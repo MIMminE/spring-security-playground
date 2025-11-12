@@ -35,6 +35,12 @@ dependencies {
     // postgreSQL 데이터베이스 사용을 위한 라이브러리
     runtimeOnly("org.postgresql:postgresql")
 
+    // REDIS 사용을 위한 라이브러리
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
+
+    // Spring Session 사용을 위한 라이브러리
+    implementation("org.springframework.session:spring-session-data-redis")
+
     implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

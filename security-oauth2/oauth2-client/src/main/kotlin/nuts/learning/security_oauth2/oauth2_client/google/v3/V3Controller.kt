@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@Profile("v3")
+@Profile("v3", "v4")
 class V3Controller(private val userRepository: UserRepository) {
 
     // post 요청으로 기존에 있는 user 정보에 admin 권한 추가하는 메서드 생성
